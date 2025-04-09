@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <button onclick="toggleTheme()">Змінити тему</button>
+  <input type="text" id="username" placeholder="Введи ім’я">
+<button onclick="showName()">Показати</button>
+<p id="output"></p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Цифрове резюме</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav >
+    <a href="projects.html">Проєкти</a>
+    <a href="#">Головна</a>
+    <a href="#">Про мене</a>
+    <a href="#">Контакти</a>
+  </nav>
+    <h1>Привіт, я Броник!</h1>
+  <p>Я вивчаю фронтенд-розробку. Обожнюю фільми, книги і крутий дизайн.</p>
+  <img src="https://webmaestro.com.ua/img/blog/20201016122530_.jpeg" alt="Моє фото">
+  <h2>Навички:</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS (в процесі вивчення)</li>
+    <li>Креативність 💡</li>
+  </ul>
+  <a href="mailto:yourname@example.com">Написати мені</a>
+  <script>
+    
+  function showName() {
+    const name = document.getElementById("username").value;
+    document.getElementById("output").textContent = "Привіт, " + name + "!";
+  }
+  function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+  <p id="greeting">Привіт, гість!</p>
+  <button onclick="changeText()">Змінити привітання</button>
+  <script>
+    function changeText() {
+      document.getElementById("greeting").textContent = "Вітаю на моєму сайті!";
+    }
+  </script>
+  
+   </body>
+</html>
